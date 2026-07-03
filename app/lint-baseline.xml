@@ -35,6 +35,17 @@
     </issue>
 
     <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.library than 9.3.0-alpha12 is available: 9.3.0-rc01"
+        errorLine1="agp = &quot;9.3.0-alpha12&quot;"
+        errorLine2="      ~~~~~~~~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
         id="UnusedResources"
         message="The resource `R.color.purple_200` appears to be unused"
         errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
