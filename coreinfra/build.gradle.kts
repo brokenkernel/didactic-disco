@@ -35,10 +35,20 @@ configure<LibraryExtension> {
 
 dependencies {
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.core.ktx)
+
+    runtimeOnly(libs.kotlinx.coroutines.android)
+
+    androidTestRuntimeOnly(libs.androidx.loader)
+    androidTestRuntimeOnly(libs.androidx.runner)
+
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.monitor)
+    androidTestImplementation(libs.junit)
 
     detektPlugins(libs.composeDetektRules)
     detektPlugins(libs.detektRulesLibraries)
