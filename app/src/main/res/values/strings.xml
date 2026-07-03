@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Didactic Disco</string>
+    <string name="attribution_audio_playback">audio playback</string>
 </resources>
