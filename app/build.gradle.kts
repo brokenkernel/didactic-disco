@@ -90,8 +90,9 @@ dependencies {
     implementation(projects.coreinfra)
     implementation(projects.features.homescreen)
 
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    debugRuntimeOnly(libs.androidx.compose.ui.test.manifest)
 
     androidTestRuntimeOnly(libs.androidx.runner)
     androidTestRuntimeOnly(libs.kotlinx.coroutines.test)
