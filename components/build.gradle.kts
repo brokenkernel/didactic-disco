@@ -25,6 +25,12 @@ configure<LibraryExtension> {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
+    lint {
+        lintConfig = file("lint.xml")
+        baseline = file("lint-baseline.xml")
+        checkDependencies = true
+        warningsAsErrors = true
+    }
 }
 
 dependencies {
@@ -33,4 +39,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    detektPlugins(libs.composeDetektRules)
+    detektPlugins(libs.detektRulesLibraries)
+
+    ktlintRuleset(libs.ktlintCompose)
+
+    lintChecks(libs.android.securityLint)
+    lintChecks(libs.androidx.lint.gradle)
+    lintChecks(libs.slack.lint.checks)
+    lintChecks(libs.slack.lint.checks.compose)
+}
+
+kotlin {
+    compilerOptions {
+        allWarningsAsErrors = true
+    }
+    explicitApi()
 }

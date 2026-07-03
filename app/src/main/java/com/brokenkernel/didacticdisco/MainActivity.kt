@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.brokenkernel.didacticdisco.ui.theme.DidacticDiscoTheme
 
-class MainActivity : ComponentActivity() {
+public class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(
+internal fun Greeting(
     name: String,
     modifier: Modifier = Modifier,
 ) {
@@ -43,7 +43,7 @@ fun Greeting(
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+private fun GreetingPreview() {
     DidacticDiscoTheme {
         Greeting("Android")
     }

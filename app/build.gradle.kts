@@ -92,4 +92,27 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    detektPlugins(libs.composeDetektRules)
+    detektPlugins(libs.detektRulesLibraries)
+
+    ktlintRuleset(libs.ktlintCompose)
+
+    lintChecks(libs.android.securityLint)
+    lintChecks(libs.androidx.lint.gradle)
+    lintChecks(libs.slack.lint.checks)
+    lintChecks(libs.slack.lint.checks.compose)
+}
+
+composeCompiler {
+    includeSourceInformation = true
+    includeTraceMarkers = true
+    featureFlags = setOf()
+}
+
+kotlin {
+    compilerOptions {
+        allWarningsAsErrors = true
+    }
+    explicitApi()
 }

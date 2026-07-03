@@ -34,7 +34,7 @@ private val LightColorScheme =
     )
 
 @Composable
-fun DidacticDiscoTheme(
+public fun DidacticDiscoTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
