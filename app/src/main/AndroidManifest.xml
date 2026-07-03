@@ -6,6 +6,15 @@
         android:name="android.hardware.faketouch"
         android:required="false" />
     <uses-feature
+        android:name="android.hardware.faketouch.multitouch"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.faketouch.multitouch.distinct"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.faketouch.multitouch.jazzhand"
+        android:required="false" />
+    <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
@@ -14,6 +23,43 @@
     <uses-feature
         android:name="android.hardware.audio.output"
         android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.print"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.app_widgets"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.external" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.manual_post_processing" android:required="false" />
+    <uses-feature android:name="android.hardware.type.pc" android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +69,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DidacticDisco">
+        android:theme="@style/Theme.DidacticDisco"
+        android:hardwareAccelerated="true">
+        <!--        android:gwpAsanMode="always"-->
+        <!--        android:enableOnBackInvokedCallback="true"-->
+        <!--        android:networkSecurityConfig="@xml/network_security_config"-->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -31,10 +81,20 @@
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.action.NOTIFICATION_PREFERENCES" />
             </intent-filter>
+<!--            <meta-data-->
+<!--                android:name="android.app.shortcuts"-->
+<!--                android:resource="@xml/shortcuts" />-->
         </activity>
+
+        <!-- this might actually need multi-process datastore holder, but I think it should be easy and straightforward -->
+        <property
+            android:name="android.window.PROPERTY_SUPPORTS_MULTI_INSTANCE_SYSTEM_UI"
+            android:value="true" />
 
         <profileable
             android:shell="true"
@@ -46,10 +106,11 @@
         <meta-data
             android:name="android.webkit.WebView.EnableSafeBrowsing"
             android:value="true" />
-<!--        <meta-data-->
-<!--            android:name="com.google.android.gms.version"-->
-<!--            android:value="@integer/google_play_services_version" />-->
+        <!--        <meta-data-->
+        <!--            android:name="com.google.android.gms.version"-->
+        <!--            android:value="@integer/google_play_services_version" />-->
     </application>
-    <attribution android:tag="audioPlayback"
+    <attribution
+        android:tag="audioPlayback"
         android:label="@string/attribution_audio_playback" />
 </manifest>
