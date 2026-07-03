@@ -1,8 +1,16 @@
+import com.android.build.api.dsl.LibraryExtension
+
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.sortDependencies)
+    alias(libs.plugins.dependencyAnalysis)
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.detekt)
+    alias(libs.plugins.dokka)
+    kotlin("plugin.power-assert") version libs.versions.kotlin.get()
 }
 
-android {
+configure<LibraryExtension> {
     namespace = "com.brokenkernel.didacticdisco.components"
     compileSdk {
         version = release(37)
@@ -14,10 +22,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
-
 }
 
 dependencies {

@@ -1,8 +1,16 @@
 import com.android.build.api.dsl.ApplicationExtension
 
 plugins {
+    alias(libs.plugins.aboutLibraries)
+    alias(libs.plugins.aboutLibrariesAndroid)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.sortDependencies)
+    alias(libs.plugins.dependencyAnalysis)
+    alias(libs.plugins.ktlint)
+    id("org.jetbrains.dokka")
+    alias(libs.plugins.detekt)
+    kotlin("plugin.power-assert") version libs.versions.kotlin.get()
 }
 
 configure<ApplicationExtension> {
@@ -71,14 +79,17 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(projects.coreinfra)
     implementation(projects.components)
+    implementation(projects.coreinfra)
     implementation(projects.features.homescreen)
+
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+
     testImplementation(libs.junit)
+
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
-    debugImplementation(libs.androidx.compose.ui.tooling)
 }

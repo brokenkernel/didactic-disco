@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:MainActivity.kt:@Composable fun Greeting</ID>
+    <ID>FunctionNaming:MainActivity.kt:@Preview(showBackground = true) @Composable fun GreetingPreview</ID>
+    <ID>FunctionNaming:Theme.kt:@Composable fun DidacticDiscoTheme</ID>
+  </CurrentIssues>
+</SmellBaseline>

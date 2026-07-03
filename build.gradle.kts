@@ -1,5 +1,84 @@
+import nl.littlerobots.vcu.plugin.resolver.VersionSelectors
+import nl.littlerobots.vcu.plugin.versionSelector
+
+buildscript {
+    dependencies {
+        // https://github.com/autonomousapps/dependency-analysis-gradle-plugin/issues/1661
+        classpath(libs.kotlin.metadata.jvm)
+    }
+}
 plugins {
+    alias(libs.plugins.aboutLibraries)
+    alias(libs.plugins.aboutLibrariesAndroid)
     alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.lint) apply false
+    alias(libs.plugins.dagger.hilt.android) apply false
+    alias(libs.plugins.dependencyAnalysis)
+    alias(libs.plugins.firebaseCrashlyticsPlugin) apply false
+    alias(libs.plugins.firebasePerfPlugin) apply false
+    alias(libs.plugins.google.gms.google.services) apply false
     alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.ktlint) apply false
+    alias(libs.plugins.protobuf) apply false
+    alias(libs.plugins.sortDependencies) apply false
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.versionCatalogUpdate)
+    id("com.osacky.doctor") version "0.12.1"
+
+    kotlin("plugin.power-assert") version libs.versions.kotlin.get()
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    alias(libs.plugins.detekt)
+}
+
+dependencyAnalysis {
+    useTypesafeProjectAccessors(true)
+    usage {
+        analysis {
+            checkSuperClasses(true)
+        }
+    }
+    structure {
+        // This should be false, and we could be more specific about what to add, but meh
+//        ignoreKtx(true)
+    }
+    issues {
+        all {
+            onAny {
+//                severity("fail")
+            }
+            // This really should only be _directly used_ transitive deps. I do care about those
+            // but this test includes e.g., guava which I _don't_ directly use and thus should be excluded.
+//            onUsedTransitiveDependencies {
+//                severity("ignore")
+//            }
+        }
+    }
+    reporting {
+        printBuildHealth(true)
+    }
+}
+
+versionCatalogUpdate {
+    sortByKey = true
+    pin {
+    }
+    keep {
+        keepUnusedVersions = true
+    }
+    versionSelector { candidate ->
+        if (candidate.candidate.moduleIdentifier.toString() == "com.google.guava:guava") {
+            !candidate.candidate.version.endsWith("jre")
+        } else {
+            VersionSelectors.PREFER_STABLE.select(candidate)
+        }
+    }
+}
+
+doctor {
+    javaHome {
+        ensureJavaHomeMatches = false
+    }
 }

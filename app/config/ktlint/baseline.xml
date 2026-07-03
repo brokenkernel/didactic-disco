@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<baseline version="1.0">
+    <file name="src/main/java/com/brokenkernel/didacticdisco/MainActivity.kt">
+        <error line="34" column="5" source="standard:function-naming" />
+        <error line="46" column="5" source="standard:function-naming" />
+    </file>
+    <file name="src/main/java/com/brokenkernel/didacticdisco/ui/theme/Theme.kt">
+        <error line="37" column="5" source="standard:function-naming" />
+    </file>
+</baseline>
