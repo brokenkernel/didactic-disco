@@ -71,7 +71,8 @@ configure<ApplicationExtension> {
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
+    implementation(enforcedPlatform(libs.androidx.compose.bom))
+    implementation(enforcedPlatform(libs.kotlin.bom))
     implementation(libs.androidx.activity)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
