@@ -2,17 +2,6 @@
 <issues format="6" by="lint 9.2.1" type="baseline" client="gradle" dependencies="true" name="AGP (9.2.1)" variant="all" version="9.2.1">
 
     <issue
-        id="RedundantLabel"
-        message="Redundant label can be removed"
-        errorLine1="            android:label=&quot;@string/app_name&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/AndroidManifest.xml"
-            line="17"
-            column="13"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.color.purple_200` appears to be unused"
         errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
