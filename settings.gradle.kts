@@ -30,4 +30,6 @@ enableFeaturePreview("NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS")
 
 rootProject.name = "DidacticDisco"
 include(":app")
- 
+include(":coreinfra")
+include(":components")
+include(":features:homescreen")
