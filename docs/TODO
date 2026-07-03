@@ -1,2 +1,4 @@
 - fix project naming.
 	the general problem with multi word project names. underscores. dashes. spaces. sigh.
+- app icon
+- fastlane
