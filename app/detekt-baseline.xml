@@ -5,7 +5,6 @@
     <ID>FunctionNaming:MainActivity.kt:@Composable internal fun Greeting</ID>
     <ID>FunctionNaming:MainActivity.kt:@Preview(showBackground = true) @Composable private fun GreetingPreview</ID>
     <ID>FunctionNaming:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
-    <ID>LibraryEntitiesShouldNotBePublic:ExampleUnitTest.kt:ExampleUnitTest</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
     <ID>LibraryEntitiesShouldNotBePublic:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
   </CurrentIssues>
