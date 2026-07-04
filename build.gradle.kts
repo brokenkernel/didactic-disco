@@ -25,6 +25,7 @@ plugins {
     alias(libs.plugins.sortDependencies) apply false
     alias(libs.plugins.dokka)
     alias(libs.plugins.versionCatalogUpdate)
+    alias(libs.plugins.kotlin.parcelize) apply false
     id("com.osacky.doctor") version "0.12.1"
 
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
