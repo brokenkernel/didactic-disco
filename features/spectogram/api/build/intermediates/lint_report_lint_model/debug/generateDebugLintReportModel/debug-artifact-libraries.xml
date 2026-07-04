@@ -1,5 +1,9 @@
 <libraries>
   <library
+      name="org.jetbrains.kotlin:kotlin-parcelize-runtime:2.4.20-Beta1@jar"
+      jars="/Users/eax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-runtime/2.4.20-Beta1/15133da99d7a8c10a778aa54a6e79e5822a41bec/kotlin-parcelize-runtime-2.4.20-Beta1.jar"
+      resolved="org.jetbrains.kotlin:kotlin-parcelize-runtime:2.4.20-Beta1"/>
+  <library
       name="androidx.compose.runtime:runtime-android:1.11.4@aar"
       jars="/Users/eax/.gradle/caches/9.6.1/transforms/d618c8c0000be364b016a074777e04ee/transformed/runtime/jars/classes.jar"
       resolved="androidx.compose.runtime:runtime-android:1.11.4"
@@ -25,6 +29,9 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name=":@@:coreinfra::debug"
+      project=":coreinfra"/>
   <library
       name="androidx.core:core:1.19.0@aar"
       jars="/Users/eax/.gradle/caches/9.6.1/transforms/d204d180a80685b32268156f8138e231/transformed/core-1.19.0/jars/classes.jar"
@@ -60,6 +67,7 @@
       name="androidx.lifecycle:lifecycle-runtime:2.6.2@aar"
       jars="/Users/eax/.gradle/caches/9.6.1/transforms/90dc2d3cac7b23524ba9e972e4ece09b/transformed/lifecycle-runtime-2.6.2/jars/classes.jar"
       resolved="androidx.lifecycle:lifecycle-runtime:2.6.2"
+      provided="true"
       folder="/Users/eax/.gradle/caches/9.6.1/transforms/90dc2d3cac7b23524ba9e972e4ece09b/transformed/lifecycle-runtime-2.6.2"
       manifest="AndroidManifest.xml"
       resFolder="res"
@@ -72,7 +80,8 @@
   <library
       name="androidx.lifecycle:lifecycle-common:2.6.2@jar"
       jars="/Users/eax/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.6.2/10f354fdb64868baecd67128560c5a0d6312c495/lifecycle-common-2.6.2.jar"
-      resolved="androidx.lifecycle:lifecycle-common:2.6.2"/>
+      resolved="androidx.lifecycle:lifecycle-common:2.6.2"
+      provided="true"/>
   <library
       name="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0@jar"
       jars="/Users/eax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.9.0/6cf3b8df5a2ce8c6b0dffe55657a827c405ee2fe/kotlinx-coroutines-android-1.9.0.jar"
@@ -147,6 +156,114 @@
       jars="/Users/eax/.gradle/caches/modules-2/files-2.1/org.jspecify/jspecify/1.0.0/7425a601c1c7ec76645a78d22b8c6a627edee507/jspecify-1.0.0.jar"
       resolved="org.jspecify:jspecify:1.0.0"/>
   <library
+      name="androidx.navigation3:navigation3-runtime-android:1.1.4@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/8560c2f744477ae108889f22c39de488/transformed/navigation3-runtime/jars/classes.jar"
+      resolved="androidx.navigation3:navigation3-runtime-android:1.1.4"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/8560c2f744477ae108889f22c39de488/transformed/navigation3-runtime"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.navigationevent:navigationevent-android:1.1.2@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/25420f5eff995ba72e0ca83b8cecd6b3/transformed/navigationevent/jars/classes.jar"
+      resolved="androidx.navigationevent:navigationevent-android:1.1.2"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/25420f5eff995ba72e0ca83b8cecd6b3/transformed/navigationevent"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.compose.runtime:runtime-saveable-android:1.11.4@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/32ab0bcf1d05d3772b44b57371edf727/transformed/runtime-saveable/jars/classes.jar"
+      resolved="androidx.compose.runtime:runtime-saveable-android:1.11.4"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/32ab0bcf1d05d3772b44b57371edf727/transformed/runtime-saveable"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.savedstate:savedstate-android:1.4.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/28db5d2ae37e41bb55499cfc075c5276/transformed/savedstate/jars/classes.jar"
+      resolved="androidx.savedstate:savedstate-android:1.4.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/28db5d2ae37e41bb55499cfc075c5276/transformed/savedstate"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.savedstate:savedstate-compose-android:1.4.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/f36858ca9524dc8c23e37a5c608385f5/transformed/savedstate-compose/jars/classes.jar"
+      resolved="androidx.savedstate:savedstate-compose-android:1.4.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/f36858ca9524dc8c23e37a5c608385f5/transformed/savedstate-compose"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/0b2144066f90d6f3e03a3b3376c13d6d/transformed/lifecycle-runtime-ktx/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/0b2144066f90d6f3e03a3b3376c13d6d/transformed/lifecycle-runtime-ktx"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.lifecycle:lifecycle-common-jvm:2.10.0@jar"
+      jars="/Users/eax/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-jvm/2.10.0/2b7a92c746f3339efc533a2da0024e596760f816/lifecycle-common-jvm-2.10.0.jar"
+      resolved="androidx.lifecycle:lifecycle-common-jvm:2.10.0"/>
+  <library
+      name="androidx.lifecycle:lifecycle-runtime-android:2.10.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/6be6163e4c9fdd194f7ca89ed1c8d5c4/transformed/lifecycle-runtime/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-runtime-android:2.10.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/6be6163e4c9fdd194f7ca89ed1c8d5c4/transformed/lifecycle-runtime"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/e798933b2366fc2274895882c40aa927/transformed/lifecycle-runtime-compose/jars/classes.jar"
+      resolved="androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/e798933b2366fc2274895882c40aa927/transformed/lifecycle-runtime-compose"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.11.0@jar"
       jars="/Users/eax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.11.0/3d57dc678bd8d72a60e7adf0eca5c54e3f4f4b79/kotlinx-coroutines-core-jvm-1.11.0.jar"
       resolved="org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.11.0"/>
@@ -172,10 +289,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.profileinstaller:profileinstaller:1.3.0@aar"
-      jars="/Users/eax/.gradle/caches/9.6.1/transforms/1bc4a8b2debc153a226d4a61e8d8bd31/transformed/profileinstaller-1.3.0/jars/classes.jar"
-      resolved="androidx.profileinstaller:profileinstaller:1.3.0"
-      folder="/Users/eax/.gradle/caches/9.6.1/transforms/1bc4a8b2debc153a226d4a61e8d8bd31/transformed/profileinstaller-1.3.0"
+      name="androidx.profileinstaller:profileinstaller:1.4.0@aar"
+      jars="/Users/eax/.gradle/caches/9.6.1/transforms/0ea49c5aed23464a2821f333c2ab16ad/transformed/profileinstaller-1.4.0/jars/classes.jar"
+      resolved="androidx.profileinstaller:profileinstaller:1.4.0"
+      folder="/Users/eax/.gradle/caches/9.6.1/transforms/0ea49c5aed23464a2821f333c2ab16ad/transformed/profileinstaller-1.4.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -227,4 +344,8 @@
       name="androidx.concurrent:concurrent-futures:1.1.0@jar"
       jars="/Users/eax/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar"
       resolved="androidx.concurrent:concurrent-futures:1.1.0"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3@jar"
+      jars="/Users/eax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.7.3/1f226780b845ff9206474c05159245d861556249/kotlinx-serialization-core-jvm-1.7.3.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3"/>
 </libraries>

@@ -82,7 +82,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.text)
     implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.compose.ui.unit)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.foundation)
     implementation(libs.androidx.foundation.layout)
@@ -92,7 +91,6 @@ dependencies {
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.runtime)
-    implementation(libs.kotlinx.serialization.core)
     implementation(projects.components)
     implementation(projects.coreinfra)
     implementation(projects.features.homescreen.api)
@@ -107,6 +105,7 @@ dependencies {
     androidTestRuntimeOnly(libs.androidx.runner)
     androidTestRuntimeOnly(libs.kotlinx.coroutines.test)
 
+    testImplementation(libs.androidx.compose.ui.unit)
     testImplementation(libs.junit)
 
     androidTestImplementation(platform(libs.androidx.compose.bom))

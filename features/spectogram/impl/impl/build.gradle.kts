@@ -11,7 +11,7 @@ plugins {
 }
 
 configure<LibraryExtension> {
-    namespace = "com.brokenkernel.didacticdisco.homescreen"
+    namespace = "com.brokenkernel.didacticdisco.spectogram"
     compileSdk {
         version = release(37)
     }
