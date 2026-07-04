@@ -1,4 +1,4 @@
-package com.brokenkernel.didacticdisco.homescreen
+package com.brokenkernel.didacticdisco.spectogram
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

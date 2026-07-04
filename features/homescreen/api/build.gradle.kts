@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
+    alias(libs.plugins.kotlin.parcelize)
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
 }
 
@@ -39,6 +40,9 @@ dependencies {
 
     implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(projects.components)
+    implementation(projects.coreinfra)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 

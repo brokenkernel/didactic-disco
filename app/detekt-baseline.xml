@@ -2,8 +2,7 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>FunctionNaming:MainActivity.kt:@Composable internal fun Greeting</ID>
-    <ID>FunctionNaming:MainActivity.kt:@Preview(showBackground = true) @Composable private fun GreetingPreview</ID>
+    <ID>ForbiddenComment:MainActivity.kt:MainActivity$// TODO: figure out better way to handle general navigation goto class</ID>
     <ID>FunctionNaming:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
     <ID>LibraryEntitiesShouldNotBePublic:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
