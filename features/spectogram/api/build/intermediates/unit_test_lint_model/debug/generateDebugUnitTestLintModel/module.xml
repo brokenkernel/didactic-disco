@@ -1,0 +1,24 @@
+<lint-module
+    format="1"
+    dir="/Users/eax/svn/android/didactic-disco/features/spectogram/api"
+    name=":features:spectogram:api"
+    type="LIBRARY"
+    maven="DidacticDisco.features.spectogram:api:unspecified"
+    agpVersion="9.2.1"
+    buildFolder="build"
+    bootClassPath="/Users/eax/Library/Android/sdk/platforms/android-37.0/android.jar:/Users/eax/Library/Android/sdk/build-tools/36.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="21"
+    compileTarget="android-37.0"
+    neverShrinking="true"
+    highlightGradualR8Api="false">
+  <lintOptions
+      lintConfig="lint.xml"
+      baselineFile="lint-baseline.xml"
+      checkDependencies="true"
+      abortOnError="true"
+      absolutePaths="true"
+      warningsAsErrors="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

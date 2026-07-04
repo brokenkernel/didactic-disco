@@ -32,4 +32,7 @@ rootProject.name = "DidacticDisco"
 include(":app")
 include(":coreinfra")
 include(":components")
-include(":features:homescreen")
+include(":features:homescreen:api")
+include(":features:homescreen:impl")
+include(":features:spectogram:api")
+include(":features:spectogram:impl")
