@@ -3,8 +3,7 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>ForbiddenComment:MainActivity.kt:MainActivity$// TODO: figure out better way to handle general navigation goto class</ID>
-    <ID>FunctionNaming:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
+    <ID>FunctionNaming:Theme.kt:@Composable internal fun DidacticDiscoTheme</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
-    <ID>LibraryEntitiesShouldNotBePublic:Theme.kt:@Composable public fun DidacticDiscoTheme</ID>
   </CurrentIssues>
 </SmellBaseline>
