@@ -74,6 +74,12 @@ configure<ApplicationExtension> {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
+    implementation(projects.components)
+    implementation(projects.coreinfra)
+    implementation(projects.features.homescreen.api)
+    implementation(projects.features.homescreen.impl)
+    implementation(projects.features.spectogram.api)
+    implementation(projects.features.spectogram.impl)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
@@ -91,19 +97,10 @@ dependencies {
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.runtime)
-    implementation(projects.components)
-    implementation(projects.coreinfra)
-    implementation(projects.features.homescreen.api)
-    implementation(projects.features.homescreen.impl)
-    implementation(projects.features.spectogram.api)
-    implementation(projects.features.spectogram.impl)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     debugRuntimeOnly(libs.androidx.compose.ui.test.manifest)
-
-    androidTestRuntimeOnly(libs.androidx.runner)
-    androidTestRuntimeOnly(libs.kotlinx.coroutines.test)
 
     testImplementation(libs.androidx.compose.ui.unit)
     testImplementation(libs.junit)
@@ -115,6 +112,9 @@ dependencies {
     androidTestImplementation(libs.androidx.monitor)
     androidTestImplementation(libs.androidx.runtime)
     androidTestImplementation(libs.junit)
+
+    androidTestRuntimeOnly(libs.androidx.runner)
+    androidTestRuntimeOnly(libs.kotlinx.coroutines.test)
 
     detektPlugins(libs.composeDetektRules)
     detektPlugins(libs.detektRulesLibraries)

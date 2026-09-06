@@ -37,21 +37,20 @@ configure<LibraryExtension> {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
-
     implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.navigation3.runtime)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 
-    androidTestRuntimeOnly(libs.androidx.loader)
-    androidTestRuntimeOnly(libs.androidx.runner)
-
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.monitor)
     androidTestImplementation(libs.junit)
+
+    androidTestRuntimeOnly(libs.androidx.loader)
+    androidTestRuntimeOnly(libs.androidx.runner)
 
     detektPlugins(libs.composeDetektRules)
     detektPlugins(libs.detektRulesLibraries)
