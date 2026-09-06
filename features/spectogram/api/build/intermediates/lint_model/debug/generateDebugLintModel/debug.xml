@@ -6,7 +6,7 @@
     debuggable="true"
     mergedManifest="build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-debug-report.txt"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-9.2.1"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-9.4.0"
     partialResultsDir="build/intermediates/lint_partial_results/debug/lintAnalyzeDebug/out">
   <buildFeatures/>
   <sourceProviders>
@@ -27,6 +27,6 @@
       type="MAIN"
       applicationId="com.brokenkernel.didacticdisco.spectogram.api"
       generatedSourceFolders="build/generated/ap_generated_sources/debug/out"
-      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.6.1/transforms/573076563fc522f2a06fc6a045601789/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.6.1/transforms/18c3ea53da6736278b8cc81c262f027c/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
