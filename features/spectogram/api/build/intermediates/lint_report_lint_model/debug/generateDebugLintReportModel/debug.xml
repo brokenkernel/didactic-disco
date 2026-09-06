@@ -27,6 +27,6 @@
       type="MAIN"
       applicationId="com.brokenkernel.didacticdisco.spectogram.api"
       generatedSourceFolders="build/generated/ap_generated_sources/debug/out"
-      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.6.1/transforms/18c3ea53da6736278b8cc81c262f027c/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.7.1/transforms/190dfa0088bb1742e1a9cf9be4282e15/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
