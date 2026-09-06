@@ -37,6 +37,10 @@ configure<LibraryExtension> {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
+    implementation(projects.components)
+    implementation(projects.coreinfra)
+    implementation(projects.features.homescreen.api)
+    implementation(projects.features.spectogram.api)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.compose.ui)
@@ -45,15 +49,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.navigation3.runtime)
-    implementation(projects.components)
-    implementation(projects.coreinfra)
-    implementation(projects.features.homescreen.api)
-    implementation(projects.features.spectogram.api)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
-
-    androidTestRuntimeOnly(libs.androidx.loader)
-    androidTestRuntimeOnly(libs.androidx.runner)
 
     testImplementation(libs.androidx.compose.ui.unit)
     testImplementation(libs.junit)
@@ -61,6 +58,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.monitor)
     androidTestImplementation(libs.junit)
+
+    androidTestRuntimeOnly(libs.androidx.loader)
+    androidTestRuntimeOnly(libs.androidx.runner)
 
     detektPlugins(libs.composeDetektRules)
     detektPlugins(libs.detektRulesLibraries)
