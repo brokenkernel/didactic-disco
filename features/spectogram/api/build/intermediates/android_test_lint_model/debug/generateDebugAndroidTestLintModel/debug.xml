@@ -24,6 +24,6 @@
   <artifact
       type="INSTRUMENTATION_TEST"
       applicationId="com.brokenkernel.didacticdisco.spectogram.api.test"
-      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.7.1/transforms/65b50e336322a814fd39de26b762f382/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.7.1/transforms/74b86f7e2814b9da6cbf3a62c3bde74c/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
