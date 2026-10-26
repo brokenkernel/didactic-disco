@@ -22,7 +22,7 @@ configure<ApplicationExtension> {
 
     defaultConfig {
         applicationId = "com.brokenkernel.didacticdisco"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 37
         versionCode = 1
         versionName = "0.0.$versionCode"
