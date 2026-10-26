@@ -1,7 +1,7 @@
 <variant
     name="debug"
     package="com.brokenkernel.didacticdisco.spectogram.api"
-    minSdkVersion="23"
+    minSdkVersion="24"
     targetSdkVersion="37.0"
     debuggable="true"
     mergedManifest="build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml"
@@ -24,6 +24,6 @@
   <artifact
       type="INSTRUMENTATION_TEST"
       applicationId="com.brokenkernel.didacticdisco.spectogram.api.test"
-      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.7.1/transforms/fc166111bac23ad98ff4b84609b7fa6a/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/eax/.gradle/caches/9.8.2/transforms/749d1c8213901d0502ebcaea99ae4fc5/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

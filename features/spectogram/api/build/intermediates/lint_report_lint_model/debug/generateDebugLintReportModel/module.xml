@@ -4,7 +4,7 @@
     name=":features:spectogram:api"
     type="LIBRARY"
     maven="DidacticDisco.features.spectogram:api:unspecified"
-    agpVersion="9.4.0"
+    agpVersion="9.4.1"
     buildFolder="build"
     bootClassPath="/Users/eax/Library/Android/sdk/platforms/android-37.0/android.jar:/Users/eax/Library/Android/sdk/build-tools/36.0.0/core-lambda-stubs.jar"
     javaSourceLevel="21"
