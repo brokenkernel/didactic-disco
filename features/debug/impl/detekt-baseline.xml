@@ -4,6 +4,5 @@
   <CurrentIssues>
     <ID>LibraryEntitiesShouldNotBePublic:ExampleUnitTest.kt:ExampleUnitTest</ID>
     <ID>LibraryEntitiesShouldNotBePublic:NavigationImplementations.kt:public fun EntryProviderScope&lt;DidacticDiscoRoute>.debugScreenEntryBuilder</ID>
-    <ID>WildcardImport:ExampleUnitTest.kt:import org.junit.Assert.*</ID>
   </CurrentIssues>
 </SmellBaseline>
