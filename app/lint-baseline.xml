@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <issues format="6" by="lint 9.5.2" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.2)" variant="all" version="9.5.2">
 
-    <issue
-        id="SystemPermissionTypo"
-        message="Did you mean `com.android.alarm.permission.SET_ALARM`?"
-        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.SET_ALARM&quot; />"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/AndroidManifest.xml"
-            line="59"
-            column="36"/>
-    </issue>
-
 </issues>
