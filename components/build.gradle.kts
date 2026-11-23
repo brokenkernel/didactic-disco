@@ -37,8 +37,6 @@ android {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
-    implementation(libs.androidx.compose.runtime.android)
-    implementation(libs.androidx.core.ktx)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 

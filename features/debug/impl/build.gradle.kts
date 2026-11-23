@@ -36,25 +36,25 @@ android {
 }
 
 dependencies {
+    api(projects.coreinfra)
+    api(libs.androidx.compose.runtime.android)
+    api(libs.androidx.foundation.layout)
+    api(libs.androidx.navigation3.runtime)
+
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
-    implementation(projects.components)
-    implementation(projects.coreinfra)
     implementation(projects.features.debug.api)
-    implementation(projects.features.homescreen.api)
     implementation(projects.features.spectogram.api)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.text)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.lifecycle.common)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 
-    testImplementation(libs.androidx.compose.ui.unit)
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)

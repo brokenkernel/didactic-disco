@@ -36,13 +36,11 @@ android {
 }
 
 dependencies {
+    api(projects.coreinfra)
+
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
-    implementation(projects.components)
-    implementation(projects.coreinfra)
-    implementation(libs.androidx.compose.runtime.android)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.kotlin.parcelize.runtime)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 
