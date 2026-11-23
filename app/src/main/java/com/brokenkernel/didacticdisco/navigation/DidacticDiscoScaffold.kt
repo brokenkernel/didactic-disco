@@ -5,8 +5,11 @@ import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
@@ -31,11 +34,18 @@ private fun <T : Parcelable> rememberParcelableBackStack(vararg elements: T): Sn
 
 @Composable
 public fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
-    Scaffold(modifier = modifier.fillMaxSize()) { innerPadding ->
+    val snackbarHostState = remember { SnackbarHostState() }
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        snackbarHost = {
+            SnackbarHost(hostState = snackbarHostState)
+        },
+    ) { innerPadding ->
         val backStack =
             rememberParcelableBackStack<DidacticDiscoRoute>(
                 HomeScreenNavgiationKey,
             )
+
         SharedTransitionLayout {
             val resultEventBus = rememberResultEventBus()
             NavDisplay(
@@ -45,7 +55,7 @@ public fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                     listOf(
                         rememberSaveableStateHolderNavEntryDecorator(),
                         rememberViewModelStoreNavEntryDecorator(),
-                        rememberResultEventBusNavEntryDecorator(resultEventBus = resultEventBus)
+                        rememberResultEventBusNavEntryDecorator(resultEventBus = resultEventBus),
                     ),
                 entryProvider =
                     entryProvider {
