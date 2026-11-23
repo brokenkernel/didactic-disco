@@ -75,7 +75,9 @@ android {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
+    implementation(projects.components)
     implementation(projects.coreinfra)
+    implementation(projects.features.debug.api)
     implementation(projects.features.debug.impl)
     implementation(projects.features.homescreen.api)
     implementation(projects.features.homescreen.impl)
@@ -85,6 +87,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.animation)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
     implementation(libs.androidx.compose.runtime.android)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
@@ -119,6 +122,7 @@ dependencies {
     ktlintRuleset(libs.ktlintCompose)
 
     lintChecks(libs.bundles.androidLintChecks)
+    implementation(libs.androidx.annotation)
 }
 
 composeCompiler {

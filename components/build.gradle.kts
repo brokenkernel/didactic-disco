@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.sortDependencies)
     alias(libs.plugins.dependencyAnalysis)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ktlint)
     alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
@@ -35,8 +36,16 @@ android {
 }
 
 dependencies {
+    api(libs.androidx.compose.runtime.android)
+    api(libs.androidx.compose.ui)
+
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.text)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.foundation.layout)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 

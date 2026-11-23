@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Didactic Disco</string>
     <string name="attribution_audio_playback">audio playback</string>
+    <string name="navigation_screen_home">Home</string>
+    <string name="navigation_screen_home_screen">Home Screen</string>
+    <string name="navigation_screen_debug">Debug</string>
+    <string name="navigation_screen_debug_screen">Debug Screen</string>
+    <string name="navigation_open_screen_specific_menu">Open Menu</string>
 </resources>

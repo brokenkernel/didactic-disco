@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <SmellBaseline>
   <ManuallySuppressedIssues/>
-  <CurrentIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:SimpleIconButton.kt:@Composable public fun SimpleIconButton</ID>
+    <ID>FunctionNaming:SimpleTooltipWrapper.kt:@OptIn(ExperimentalMaterial3Api::class) @Composable public fun SimpleTooltipWrapper</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:SimpleIconButton.kt:@Composable public fun SimpleIconButton</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:SimpleTooltipWrapper.kt:@OptIn(ExperimentalMaterial3Api::class) @Composable public fun SimpleTooltipWrapper</ID>
+  </CurrentIssues>
 </SmellBaseline>
