@@ -107,6 +107,10 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     debugRuntimeOnly(libs.androidx.compose.ui.test.manifest)
+    debugRuntimeOnly(libs.leakcanary.android)
+
+    releaseRuntimeOnly(libs.leakcanary.android.release)
+    releaseRuntimeOnly(libs.leakcanary.object1.watcher.android)
 
     testImplementation(libs.androidx.compose.ui.unit)
     testImplementation(libs.junit)
@@ -118,6 +122,7 @@ dependencies {
 
     androidTestRuntimeOnly(libs.androidx.runner)
     androidTestRuntimeOnly(libs.kotlinx.coroutines.test)
+    androidTestRuntimeOnly(libs.leakcanary.android.instrumentation)
 
     detektPlugins(libs.composeDetektRules)
     detektPlugins(libs.detektRulesLibraries)
