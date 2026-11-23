@@ -1,15 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 9.4.1" type="baseline" client="gradle" dependencies="true" name="AGP (9.4.1)" variant="all" version="9.4.1">
+<issues format="6" by="lint 9.5.2" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.2)" variant="all" version="9.5.2">
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.compose.foundation:foundation-layout than 1.12.0 is available: 1.12.1"
-        errorLine1="foundationLayout = &quot;1.12.1&quot;"
-        errorLine2="                   ~~~~~~~~">
+        message="A newer version of com.google.firebase:firebase-bom than 35.1.0 is available: 35.2.0"
+        errorLine1="firebaseBom = &quot;35.1.0&quot;"
+        errorLine2="              ~~~~~~~~">
         <location
             file="../gradle/libs.versions.toml"
-            line="41"
-            column="20"/>
+            line="35"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-crashlytics than 21.0.1 is available: 21.1.0"
+        errorLine1="firebaseCrashlytics = &quot;21.0.1&quot;"
+        errorLine2="                      ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="37"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.gms.google-services than 4.5.0 is available: 4.6.0"
+        errorLine1="googleGmsGoogleServices = &quot;4.5.0&quot;"
+        errorLine2="                          ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="44"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.devtools.ksp than 2.3.12 is available: 2.3.14"
+        errorLine1="ksp = &quot;2.3.12&quot;"
+        errorLine2="      ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="64"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.typesafe:config than 1.4.9 is available: 1.4.10"
+        errorLine1="config = &quot;1.4.9&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="23"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.dokka than 2.2.0 is available: 2.3.0"
+        errorLine1="dokka = &quot;2.2.0&quot;"
+        errorLine2="        ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.dokka-javadoc than 2.2.0 is available: 2.3.0"
+        errorLine1="dokka = &quot;2.2.0&quot;"
+        errorLine2="        ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.guava:guava than 33.7.2-android is available: 33.8.0-android"
+        errorLine1="guava = &quot;33.7.2-android&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="45"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-core than 1.12.0 is available: 1.13.0"
+        errorLine1="kotlinxSerialization = &quot;1.12.0&quot;"
+        errorLine2="                       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-hocon than 1.12.0 is available: 1.13.0"
+        errorLine1="kotlinxSerialization = &quot;1.12.0&quot;"
+        errorLine2="                       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.12.0 is available: 1.13.0"
+        errorLine1="kotlinxSerialization = &quot;1.12.0&quot;"
+        errorLine2="                       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-protobuf than 1.12.0 is available: 1.13.0"
+        errorLine1="kotlinxSerialization = &quot;1.12.0&quot;"
+        errorLine2="                       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="62"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.protobuf than 0.10.0 is available: 0.10.1"
+        errorLine1="protobuf = &quot;0.10.0&quot;"
+        errorLine2="           ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="84"
+            column="12"/>
     </issue>
 
     <issue
