@@ -40,6 +40,7 @@ dependencies {
     implementation(enforcedPlatform(libs.kotlin.bom))
     implementation(projects.components)
     implementation(projects.coreinfra)
+    implementation(projects.features.debug.api)
     implementation(projects.features.homescreen.api)
     implementation(projects.features.spectogram.api)
     implementation(libs.androidx.compose.material3)

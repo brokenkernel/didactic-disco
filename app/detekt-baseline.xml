@@ -2,8 +2,9 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>ForbiddenComment:MainActivity.kt:MainActivity$// TODO: figure out better way to handle general navigation goto class</ID>
+    <ID>FunctionNaming:DidacticDiscoScaffold.kt:@Composable public fun DidacticDiscoScaffold</ID>
     <ID>FunctionNaming:Theme.kt:@Composable internal fun DidacticDiscoTheme</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoScaffold.kt:@Composable public fun DidacticDiscoScaffold</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
   </CurrentIssues>
 </SmellBaseline>

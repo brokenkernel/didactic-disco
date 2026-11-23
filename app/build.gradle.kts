@@ -77,6 +77,8 @@ dependencies {
     implementation(enforcedPlatform(libs.kotlin.bom))
     implementation(projects.components)
     implementation(projects.coreinfra)
+    implementation(projects.features.debug.api)
+    implementation(projects.features.debug.impl)
     implementation(projects.features.homescreen.api)
     implementation(projects.features.homescreen.impl)
     implementation(projects.features.spectogram.api)
@@ -111,7 +113,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.monitor)
-    androidTestImplementation(libs.androidx.runtime)
     androidTestImplementation(libs.junit)
 
     androidTestRuntimeOnly(libs.androidx.runner)
