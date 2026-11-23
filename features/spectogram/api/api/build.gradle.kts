@@ -10,7 +10,7 @@ plugins {
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
 }
 
-configure<LibraryExtension> {
+android {
     namespace = "com.brokenkernel.didacticdisco.spectogram"
     compileSdk {
         version = release(37) {

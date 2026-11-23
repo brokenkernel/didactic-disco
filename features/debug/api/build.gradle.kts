@@ -12,9 +12,10 @@ plugins {
 android {
     namespace = "com.brokenkernel.didacticdisco.debug.api"
     compileSdk {
-        version = release(37) {
-            minorApiLevel = 2
-        }
+        version =
+            release(37) {
+                minorApiLevel = 2
+            }
     }
 
     defaultConfig {
@@ -32,7 +33,6 @@ android {
         checkDependencies = true
         warningsAsErrors = true
     }
-
 }
 
 dependencies {
@@ -65,7 +65,6 @@ dependencies {
     lintChecks(libs.slack.lint.checks)
     lintChecks(libs.slack.lint.checks.compose)
 }
-
 
 kotlin {
     compilerOptions {
