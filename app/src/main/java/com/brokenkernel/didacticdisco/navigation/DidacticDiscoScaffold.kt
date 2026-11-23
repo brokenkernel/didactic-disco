@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
+import androidx.navigation3.runtime.result.rememberResultEventBus
+import androidx.navigation3.runtime.result.rememberResultEventBusNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import com.brokenkernel.didacticdisco.debug.impl.debugScreenEntryBuilder
@@ -35,6 +37,7 @@ public fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                 HomeScreenNavgiationKey,
             )
         SharedTransitionLayout {
+            val resultEventBus = rememberResultEventBus()
             NavDisplay(
                 backStack = backStack,
                 onBack = { backStack.removeLastOrNull() },
@@ -42,6 +45,7 @@ public fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                     listOf(
                         rememberSaveableStateHolderNavEntryDecorator(),
                         rememberViewModelStoreNavEntryDecorator(),
+                        rememberResultEventBusNavEntryDecorator(resultEventBus = resultEventBus)
                     ),
                 entryProvider =
                     entryProvider {
