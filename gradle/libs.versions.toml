@@ -252,6 +252,15 @@ slf4j-android = { module = "uk.uuid.slf4j:slf4j-android", version.ref = "slf4jAn
 tools-fastlane-screengrab = { module = "tools.fastlane:screengrab", version.ref = "screengrab" }
 ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 
+[bundles]
+androidLintChecks = [
+    "android-securityLint",
+    "androidx-compose-runtime-lint",
+    "androidx-lint-gradle",
+    "slack-lint-checks",
+    "slack-lint-checks-compose",
+]
+
 [plugins]
 aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }
 aboutLibrariesAndroid = { id = "com.mikepenz.aboutlibraries.plugin.android", version.ref = "aboutLibraries" }
