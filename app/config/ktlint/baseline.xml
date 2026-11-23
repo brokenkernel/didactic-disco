@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <baseline version="1.0">
+    <file name="src/main/java/com/brokenkernel/didacticdisco/appinfo/LibrariesTab.kt">
+        <error line="13" column="14" source="standard:function-naming" />
+    </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/navigation/ApplicationDropdownMenu.kt">
         <error line="14" column="14" source="standard:function-naming" />
     </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/navigation/DidacticDiscoScaffold.kt">
-        <error line="50" column="14" source="standard:function-naming" />
+        <error line="51" column="14" source="standard:function-naming" />
     </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/navigation/NavigableScreens.kt">
-        <error line="13" column="5" source="standard:no-consecutive-comments" />
+        <error line="14" column="5" source="standard:no-consecutive-comments" />
     </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/ui/theme/Theme.kt">
         <error line="37" column="14" source="standard:function-naming" />

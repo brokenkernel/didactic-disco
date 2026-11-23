@@ -31,12 +31,13 @@ import androidx.navigation3.runtime.result.rememberResultEventBus
 import androidx.navigation3.runtime.result.rememberResultEventBusNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.brokenkernel.didacticdisco.R
+import com.brokenkernel.didacticdisco.appinfo.appInfoScreensEntryBuilder
 import com.brokenkernel.didacticdisco.components.SimpleIconButton
 import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import com.brokenkernel.didacticdisco.debug.impl.debugScreenEntryBuilder
 import com.brokenkernel.didacticdisco.homescreen.api.HomeScreenNavgiationKey
 import com.brokenkernel.didacticdisco.homescreen.impl.homeScreenEntryBuilder
-import com.brokenkernel.didacticdisco.spectogram.api.SpectogramNavgiationKey
+import com.brokenkernel.didacticdisco.spectogram.api.SpectogramScreenNavgiationKey
 import com.brokenkernel.didacticdisco.spectogram.impl.spectogramEntryBuilder
 import com.brokenkernel.improvtools.application.presentation.view.ApplicationDropdownMenu
 
@@ -131,7 +132,7 @@ internal fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                         entryProvider {
                             homeScreenEntryBuilder(
                                 onGoToSpectogram = {
-                                    backStack.add(SpectogramNavgiationKey)
+                                    backStack.add(SpectogramScreenNavgiationKey)
                                 },
                             )
                             spectogramEntryBuilder()
@@ -140,6 +141,7 @@ internal fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                                     backStack.add(it)
                                 },
                             )
+                            appInfoScreensEntryBuilder()
                         },
                     sharedTransitionScope = this,
                     modifier = Modifier.padding(innerPadding),

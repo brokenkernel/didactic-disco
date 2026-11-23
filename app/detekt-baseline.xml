@@ -4,9 +4,11 @@
   <CurrentIssues>
     <ID>FunctionNaming:ApplicationDropdownMenu.kt:@Composable internal fun ApplicationDropdownMenu</ID>
     <ID>FunctionNaming:DidacticDiscoScaffold.kt:@Composable internal fun DidacticDiscoScaffold</ID>
+    <ID>FunctionNaming:LibrariesTab.kt:@Composable internal fun LibrariesTab</ID>
     <ID>FunctionNaming:Theme.kt:@Composable internal fun DidacticDiscoTheme</ID>
     <ID>InvalidPackageDeclaration:ApplicationDropdownMenu.kt:package com.brokenkernel.improvtools.application.presentation.view</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
     <ID>LongMethod:DidacticDiscoScaffold.kt:@Composable internal fun DidacticDiscoScaffold</ID>
+    <ID>MatchingDeclarationName:AppInfoNavigation.kt:LibrariesScreenNavgiationKey : DidacticDiscoRoute</ID>
   </CurrentIssues>
 </SmellBaseline>

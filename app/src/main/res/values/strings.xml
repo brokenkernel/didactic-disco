@@ -6,4 +6,6 @@
     <string name="navigation_screen_debug">Debug</string>
     <string name="navigation_screen_debug_screen">Debug Screen</string>
     <string name="navigation_open_screen_specific_menu">Open Menu</string>
+    <string name="navigation_libraries_information">Licenses</string>
+    <string name="go_to_libraries_information">Go to Licences</string>
 </resources>

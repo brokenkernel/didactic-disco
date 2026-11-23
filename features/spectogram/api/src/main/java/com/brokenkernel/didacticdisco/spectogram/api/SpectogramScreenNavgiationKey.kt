@@ -4,4 +4,4 @@ import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-public object SpectogramNavgiationKey : DidacticDiscoRoute
+public object SpectogramScreenNavgiationKey : DidacticDiscoRoute

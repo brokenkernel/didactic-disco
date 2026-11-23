@@ -2,6 +2,7 @@ package com.brokenkernel.didacticdisco.navigation
 
 import androidx.annotation.StringRes
 import com.brokenkernel.didacticdisco.R
+import com.brokenkernel.didacticdisco.appinfo.LibrariesScreenNavgiationKey
 import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import com.brokenkernel.didacticdisco.debug.api.DebugScreenNavgiationKey
 import com.brokenkernel.didacticdisco.homescreen.api.HomeScreenNavgiationKey
@@ -33,6 +34,14 @@ internal enum class NavigableScreens(
         navigationBarNavigationWeight = 100,
         additionalMenuNavigationWeight = 100,
         matchingRoute = DebugScreenNavgiationKey,
+    ),
+    LibrariesScreen(
+        titleResource = R.string.navigation_libraries_information,
+        contentDescription = R.string.go_to_libraries_information,
+//        iconDrawable = R.drawable.copyright_24dp_1f1f1f_fill0_wght400_grad0_opsz24,
+        navigationBarNavigationWeight = null,
+        additionalMenuNavigationWeight = 200,
+        matchingRoute = LibrariesScreenNavgiationKey,
     ),
 
 //    @Composable

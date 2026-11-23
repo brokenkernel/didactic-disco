@@ -83,9 +83,12 @@ dependencies {
     implementation(projects.features.homescreen.impl)
     implementation(projects.features.spectogram.api)
     implementation(projects.features.spectogram.impl)
+    implementation(libs.aboutlibraries.compose.m3)
+    implementation(libs.aboutlibraries.core)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.animation)
+    implementation(libs.androidx.annotation)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
     implementation(libs.androidx.compose.runtime.android)
@@ -122,7 +125,6 @@ dependencies {
     ktlintRuleset(libs.ktlintCompose)
 
     lintChecks(libs.bundles.androidLintChecks)
-    implementation(libs.androidx.annotation)
 }
 
 composeCompiler {
