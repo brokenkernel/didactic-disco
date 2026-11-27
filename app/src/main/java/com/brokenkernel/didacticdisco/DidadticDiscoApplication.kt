@@ -41,7 +41,6 @@ public class DidadticDiscoApplication : Application() {
             strictModeVMPolicy.detectBlockedBackgroundActivityLaunch()
         }
 
-
         val strictModeThreadPolicy =
             StrictMode.ThreadPolicy
                 .Builder()

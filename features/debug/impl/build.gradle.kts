@@ -51,7 +51,7 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.text)
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core)
     implementation(libs.androidx.foundation)
     implementation(libs.androidx.runtime.saveable)
     implementation(libs.kotlinx.coroutines.core)

@@ -23,6 +23,7 @@ composeUI = "1.13.0"
 config = "1.4.10"
 core = "1.7.0"
 coreKtx = "1.19.1"
+coreVersion = "1.19.1"
 daggerVersion = "2.60.1"
 dependencyAnalysis = "3.20.4"
 detektVersion = "2.0.0-alpha.6"
@@ -134,7 +135,7 @@ androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 androidx-compose-ui-unit = { module = "androidx.compose.ui:ui-unit", version.ref = "composeUI" }
 androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "composeUI" }
-androidx-core = { module = "androidx.test:core", version.ref = "core" }
+androidx-core = { module = "androidx.core:core", version.ref = "coreVersion" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "androidXdatastore" }
 androidx-datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "androidXdatastore" }
