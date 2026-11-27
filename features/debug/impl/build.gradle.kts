@@ -37,7 +37,7 @@ android {
 
 dependencies {
     api(projects.coreinfra)
-    api(projects.features.debug.api)
+    api(libs.androidx.compose.material3)
     api(libs.androidx.compose.runtime.android)
     api(libs.androidx.foundation.layout)
     api(libs.androidx.navigation3.runtime)
@@ -45,15 +45,14 @@ dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
     implementation(projects.components)
+    implementation(projects.features.debug.api)
     implementation(libs.androidx.activity)
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.text)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.foundation)
-    implementation(libs.androidx.lifecycle.common)
-    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.runtime.saveable)
     implementation(libs.kotlinx.coroutines.core)
 

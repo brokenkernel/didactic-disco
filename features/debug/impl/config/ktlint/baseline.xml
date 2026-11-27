@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <baseline version="1.0">
     <file name="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt">
-        <error line="48" column="14" source="standard:function-naming" />
+        <error line="58" column="14" source="standard:function-naming" />
     </file>
 </baseline>

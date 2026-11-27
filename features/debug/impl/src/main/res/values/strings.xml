@@ -16,4 +16,5 @@
     <string name="about_debugging_data">Debugging Data</string>
     <string name="component_collapse_card">Collapse Card</string>
     <string name="about_show_debug_data">Show Debug Data</string>
+    <string name="error_no_email_application_available">No email application available</string>
 </resources>

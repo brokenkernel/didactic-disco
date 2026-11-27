@@ -140,6 +140,8 @@ internal fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                                 onGoTo = {
                                     backStack.add(it)
                                 },
+                                snackbarHostState = snackbarHostState,
+                                repositoryURL = "https://github.com/brokenkernel/didactic-disco",
                             )
                             appInfoScreensEntryBuilder()
                         },

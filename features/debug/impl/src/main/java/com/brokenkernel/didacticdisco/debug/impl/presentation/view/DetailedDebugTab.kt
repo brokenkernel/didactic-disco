@@ -1,11 +1,17 @@
 package com.brokenkernel.didacticdisco.debug.impl.presentation.view
 
 import android.app.NotificationManager
+import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager.PackageInfoFlags
 import android.os.Build
+import android.text.Html
+import android.text.Html.FROM_HTML_MODE_COMPACT
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,7 +26,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,12 +49,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
+import androidx.core.net.toUri
 import com.brokenkernel.didacticdisco.components.ExpandIcon
 import com.brokenkernel.didacticdisco.debug.impl.R
 import kotlinx.coroutines.launch
 
 @Composable
-internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
+internal fun DetailedDebugTab(
+    repositoryURL: String,
+    snackbarHostState: SnackbarHostState,
+    modifier: Modifier = Modifier,
+) {
     val crScope = rememberCoroutineScope()
     val resources = LocalResources.current
     val packageManager = LocalContext.current.packageManager
@@ -76,7 +90,7 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
         val result: String =
             """
         |<big>${resources.getString(R.string.about_contact_info)}</big>
-        |🌐 <u><a href="https://github.com/brokenkernel/didactic-disco">${
+        |🌐 <u><a href="$repositoryURL">${
                 resources.getString(
                     R.string.about_contact_code_repo,
                 )
@@ -270,10 +284,11 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
                     .fillMaxWidth()
                     .height(IntrinsicSize.Min),
         ) {
-//            val launcher = rememberLauncherForActivityResult(
-//                contract = ActivityResultContracts.StartActivityForResult(),
-//                onResult = {},
-//            )
+            val launcher =
+                rememberLauncherForActivityResult(
+                    contract = ActivityResultContracts.StartActivityForResult(),
+                    onResult = {},
+                )
             FilledTonalButton(
                 onClick = {
                     copyAboutText()
@@ -281,11 +296,12 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
             ) {
                 Text(stringResource(R.string.about_copy_all))
             }
-//            ElevatedButton(
-//                onClick = {
-//                    val textToBeEmailed = generateDebugInformationText()
-//
-//                    val intent = Intent(Intent.ACTION_SENDTO, "mailto:".toUri())
+            ElevatedButton(
+                onClick = {
+                    val textToBeEmailed = generateDebugInformationText()
+
+                    val intent =
+                        Intent(Intent.ACTION_SENDTO, "mailto:".toUri())
 //                        .putExtra(
 //                            Intent.EXTRA_EMAIL,
 //                            arrayOf(resources.getString(R.string.about_contact_email_address)),
@@ -294,25 +310,25 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
 //                            Intent.EXTRA_SUBJECT,
 //                            resources.getString(R.string.about_improvtools_feature_request),
 //                        )
-//                        .putExtra(
-//                            Intent.EXTRA_TEXT,
-//                            Html.fromHtml(textToBeEmailed, FROM_HTML_MODE_COMPACT),
-//                        )
-//                    try {
-//                        launcher.launch(intent)
-//                    } catch (_: ActivityNotFoundException) {
-//                        crScope.launch {
-//                            snackbarHostState.showSnackbar(
-//                                resources.getString(R.string.error_no_email_application_available),
-//                                withDismissAction = true,
-//                                duration = SnackbarDuration.Short,
-//                            )
-//                        }
-//                    }
-//                },
-//            ) {
-//                Text(stringResource(R.string.about_send_email))
-//            }
+                            .putExtra(
+                                Intent.EXTRA_TEXT,
+                                Html.fromHtml(textToBeEmailed, FROM_HTML_MODE_COMPACT),
+                            )
+                    try {
+                        launcher.launch(intent)
+                    } catch (_: ActivityNotFoundException) {
+                        crScope.launch {
+                            snackbarHostState.showSnackbar(
+                                resources.getString(R.string.error_no_email_application_available),
+                                withDismissAction = true,
+                                duration = SnackbarDuration.Short,
+                            )
+                        }
+                    }
+                },
+            ) {
+                Text(stringResource(R.string.about_send_email))
+            }
         }
     }
 }

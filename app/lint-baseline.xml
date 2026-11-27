@@ -45,15 +45,4 @@
             column="13"/>
     </issue>
 
-    <issue
-        id="UnusedResources"
-        message="The resource `R.string.about_send_email` appears to be unused"
-        errorLine1="    &lt;string name=&quot;about_send_email&quot;>send email&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="../features/debug/impl/src/main/res/values/strings.xml"
-            line="15"
-            column="13"/>
-    </issue>
-
 </issues>
