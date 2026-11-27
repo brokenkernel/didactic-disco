@@ -2,39 +2,6 @@
 <issues format="6" by="lint 9.5.3" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.3)" variant="all" version="9.5.3">
 
     <issue
-        id="NewApi"
-        message="Field requires API level 26 (current min is 24): `android.content.res.Configuration#colorMode`"
-        errorLine1="            |&lt;b>ColorMode=&lt;/b>${localConfig.colorMode}"
-        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
-            line="120"
-            column="33"/>
-    </issue>
-
-    <issue
-        id="NewApi"
-        message="Call requires API level 26 (current min is 24): `android.content.res.Configuration#isScreenHdr`"
-        errorLine1="            |&lt;b>ScreenHDR=&lt;/b>${localConfig.isScreenHdr}"
-        errorLine2="                                            ~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
-            line="125"
-            column="45"/>
-    </issue>
-
-    <issue
-        id="NewApi"
-        message="Call requires API level 26 (current min is 24): `android.content.res.Configuration#isScreenWideColorGamut`"
-        errorLine1="            |&lt;b>WideColorGamut=&lt;/b>${localConfig.isScreenWideColorGamut}"
-        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
-            line="126"
-            column="50"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.string.about_buildconfig_buildtype` appears to be unused"
         errorLine1="    &lt;string name=&quot;about_buildconfig_buildtype&quot;>&amp;lt;b>BuildConfig Build Type:&amp;lt;/b> %1$s&lt;/string>"

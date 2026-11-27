@@ -116,23 +116,37 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
             |
             |<big>LocalConfig</big>
             |<b>Locales=</b>${localConfig.locales}
-            |<b>NavigationType=</b>${localConfig.navigation}
-            |<b>ColorMode=</b>${localConfig.colorMode}
-            |<b>DensityDPI=</b>${localConfig.densityDpi}
+            |<b>NavigationType=</b>${localConfig.navigation}""" +
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    """|<b>ColorMode=</b>${localConfig.colorMode}"""
+                } else {
+                    ""
+                } +
+                """|<b>DensityDPI=</b>${localConfig.densityDpi}
             |<b>NavigationHidden=</b>${localConfig.navigationHidden}
             |<b>Orientation=</b>${localConfig.orientation}
-            |<b>ScreenLayout=</b>${localConfig.screenLayout}
-            |<b>ScreenHDR=</b>${localConfig.isScreenHdr}
-            |<b>WideColorGamut=</b>${localConfig.isScreenWideColorGamut}
-            |<b>ScreenRound=</b>${localConfig.isScreenRound}
+            |<b>ScreenLayout=</b>${localConfig.screenLayout}""" +
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    """|<b>ScreenHDR=</b>${localConfig.isScreenHdr}
+                        |<b>WideColorGamut=</b>${localConfig.isScreenWideColorGamut}"""
+                } else {
+                    ""
+                } +
+                """|<b>ScreenRound=</b>${localConfig.isScreenRound}
             |<b>uiMode=</b>${localConfig.uiMode}
             |<b>Touchscreen=</b>${localConfig.touchscreen}
             |<b>smallestScreenWidthDp=</b>${localConfig.smallestScreenWidthDp}
             |<b>layoutDirection=</b>${localConfig.layoutDirection}
             |<b>layoutDirection=</b>${localConfig.layoutDirection}
             |<br>
-            """.trimMargin().replace("\n", "<br/>")
+                """.trimMargin().replace("\n", "<br/>")
 
+        val bubblesAllowed =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
+                """<b>Bubbles Allowed:</b> ${notificationManager.canPostPromotedNotifications()}"""
+            } else {
+                ""
+            }
         // Technically this skips some information for 33,34, but not that important.
         val additionalDataForSDK35Plus =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
@@ -151,6 +165,7 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
                 |<b>Notifications Are Paused:</b> ${notificationManager.areNotificationsPaused()}
                 |<b>Notifications Are Enabled:</b> ${notificationManager.areNotificationsEnabled()}
                 |<b>Bubble Preference:</b> ${notificationManager.bubblePreference}
+                |$bubblesAllowed
                 |<b>Importance:</b> ${notificationManager.importance}
                 |<b>Policy Access Granted:</b> ${notificationManager.isNotificationPolicyAccessGranted}
                 |<b>Full Screen:</b> ${notificationManager.canUseFullScreenIntent()}
@@ -160,16 +175,7 @@ internal fun DetailedDebugTab(modifier: Modifier = Modifier) {
                 ""
             }
 
-        val additionalDataForSDK36Plus =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
-                """|<br><big>API 36 Notification</big><br>
-                |<b>Bubbles Allowed:</b> ${notificationManager.canPostPromotedNotifications()}
-                """.trimMargin()
-            } else {
-                ""
-            }
-
-        val result = basicResult + additionalDataForSDK35Plus + additionalDataForSDK36Plus
+        val result = basicResult + additionalDataForSDK35Plus
 
         // further debug information for the future
 //    Build.getFingerprintedPartitions()
