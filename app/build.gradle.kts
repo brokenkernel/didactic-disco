@@ -136,6 +136,8 @@ dependencies {
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.runtime)
     implementation(libs.androidx.runtime.saveable)
+    implementation(libs.kotlin.parcelize.runtime)
+    implementation(libs.mikepenz.aboutlibraries.compose.core)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 

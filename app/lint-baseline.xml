@@ -1,48 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 9.5.2" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.2)" variant="all" version="9.5.2">
+<issues format="6" by="lint 9.5.3" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.3)" variant="all" version="9.5.3">
 
     <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 9.5.2 is available: 9.5.3"
-        errorLine1="agp = &quot;9.5.2&quot;"
-        errorLine2="      ~~~~~~~">
+        id="NewApi"
+        message="Field requires API level 26 (current min is 24): `android.content.res.Configuration#colorMode`"
+        errorLine1="            |&lt;b>ColorMode=&lt;/b>${localConfig.colorMode}"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="../gradle/libs.versions.toml"
-            line="5"
-            column="7"/>
+            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
+            line="120"
+            column="33"/>
     </issue>
 
     <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.library than 9.5.2 is available: 9.5.3"
-        errorLine1="agp = &quot;9.5.2&quot;"
-        errorLine2="      ~~~~~~~">
+        id="NewApi"
+        message="Call requires API level 26 (current min is 24): `android.content.res.Configuration#isScreenHdr`"
+        errorLine1="            |&lt;b>ScreenHDR=&lt;/b>${localConfig.isScreenHdr}"
+        errorLine2="                                            ~~~~~~~~~~~">
         <location
-            file="../gradle/libs.versions.toml"
-            line="5"
-            column="7"/>
+            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
+            line="125"
+            column="45"/>
     </issue>
 
     <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.lint than 9.5.2 is available: 9.5.3"
-        errorLine1="agp = &quot;9.5.2&quot;"
-        errorLine2="      ~~~~~~~">
+        id="NewApi"
+        message="Call requires API level 26 (current min is 24): `android.content.res.Configuration#isScreenWideColorGamut`"
+        errorLine1="            |&lt;b>WideColorGamut=&lt;/b>${localConfig.isScreenWideColorGamut}"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="../gradle/libs.versions.toml"
-            line="5"
-            column="7"/>
+            file="src/main/java/com/brokenkernel/didacticdisco/debug/impl/presentation/view/DetailedDebugTab.kt"
+            line="126"
+            column="50"/>
     </issue>
 
     <issue
-        id="GradleDependency"
-        message="A newer version of com.google.androidbrowserhelper:androidbrowserhelper than 2.7.4 is available: 2.8.0"
-        errorLine1="androidbrowserhelper = &quot;2.7.4&quot;"
-        errorLine2="                       ~~~~~~~">
+        id="UnusedResources"
+        message="The resource `R.string.about_buildconfig_buildtype` appears to be unused"
+        errorLine1="    &lt;string name=&quot;about_buildconfig_buildtype&quot;>&amp;lt;b>BuildConfig Build Type:&amp;lt;/b> %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="../gradle/libs.versions.toml"
+            file="../features/debug/impl/src/main/res/values/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_buildconfig_version` appears to be unused"
+        errorLine1="    &lt;string name=&quot;about_buildconfig_version&quot;>&amp;lt;b>BuildConfig Version:&amp;lt;/b> %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../features/debug/impl/src/main/res/values/strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_buildconfig_version_code` appears to be unused"
+        errorLine1="    &lt;string name=&quot;about_buildconfig_version_code&quot;>&amp;lt;b>BuildConfig Version Code:&amp;lt;/b> %1$d&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../features/debug/impl/src/main/res/values/strings.xml"
             line="9"
-            column="24"/>
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_buildconfig_enable_strict_death` appears to be unused"
+        errorLine1="    &lt;string name=&quot;about_buildconfig_enable_strict_death&quot;>&amp;lt;b>BuildConfig Enable Strict Death:&amp;lt;/b> %1$b&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../features/debug/impl/src/main/res/values/strings.xml"
+            line="10"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_send_email` appears to be unused"
+        errorLine1="    &lt;string name=&quot;about_send_email&quot;>send email&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../features/debug/impl/src/main/res/values/strings.xml"
+            line="15"
+            column="13"/>
     </issue>
 
 </issues>

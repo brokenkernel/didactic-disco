@@ -44,8 +44,12 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.text)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.foundation)
     implementation(libs.androidx.foundation.layout)
+    implementation(libs.jetbrains.annotations)
+
+    debugImplementation(libs.ui.tooling)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 

@@ -2,6 +2,7 @@
 aboutLibraries = "15.3.0"
 accompanistPermissions = "0.37.3"
 activityCompose = "1.13.0"
+activityKtx = "1.13.0"
 agp = "9.5.3"
 androidDocumentationPlugin = "2.3.0"
 androidSecurirtyLint = "1.0.4"
@@ -103,6 +104,7 @@ android-securityLint = { module = "com.android.security.lint:lint", version.ref 
 androidbrowserhelper = { module = "com.google.androidbrowserhelper:androidbrowserhelper", version.ref = "androidbrowserhelper" }
 androidx-activity = { module = "androidx.activity:activity", version.ref = "activityCompose" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-animation = { module = "androidx.compose.animation:animation" }
 androidx-animation-core = { module = "androidx.compose.animation:animation-core" }
 androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }

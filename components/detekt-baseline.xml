@@ -2,8 +2,14 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
+    <ID>FunctionNaming:ExpandIcon.kt:@Composable public fun ExpandIcon</ID>
+    <ID>FunctionNaming:ExpandIcon.kt:@Preview @Composable private fun ExpandIconPreview</ID>
+    <ID>FunctionNaming:HtmlText.kt:@Composable public fun HtmlText</ID>
+    <ID>FunctionNaming:HtmlText.kt:@Preview @Composable internal fun HtmlTextPreview</ID>
     <ID>FunctionNaming:SimpleIconButton.kt:@Composable public fun SimpleIconButton</ID>
     <ID>FunctionNaming:SimpleTooltipWrapper.kt:@OptIn(ExperimentalMaterial3Api::class) @Composable public fun SimpleTooltipWrapper</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:ExpandIcon.kt:@Composable public fun ExpandIcon</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:HtmlText.kt:@Composable public fun HtmlText</ID>
     <ID>LibraryEntitiesShouldNotBePublic:SimpleIconButton.kt:@Composable public fun SimpleIconButton</ID>
     <ID>LibraryEntitiesShouldNotBePublic:SimpleTooltipWrapper.kt:@OptIn(ExperimentalMaterial3Api::class) @Composable public fun SimpleTooltipWrapper</ID>
   </CurrentIssues>

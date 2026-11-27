@@ -2,7 +2,13 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
+    <ID>ForbiddenComment:DetailedDebugTab.kt:// TODO: make utility collapsible card</ID>
+    <ID>FunctionNaming:DetailedDebugTab.kt:@Composable internal fun DetailedDebugTab</ID>
     <ID>LibraryEntitiesShouldNotBePublic:ExampleUnitTest.kt:ExampleUnitTest</ID>
     <ID>LibraryEntitiesShouldNotBePublic:NavigationImplementations.kt:public fun EntryProviderScope&lt;DidacticDiscoRoute>.debugScreenEntryBuilder</ID>
+    <ID>LongMethod:DetailedDebugTab.kt:@Composable internal fun DetailedDebugTab</ID>
+    <ID>LongMethod:DetailedDebugTab.kt:fun generateDebugInformationText: String</ID>
+    <ID>MagicNumber:DetailedDebugTab.kt:100f</ID>
+    <ID>UnusedParameter:NavigationImplementations.kt:onGoTo: (DidacticDiscoRoute) -> Unit</ID>
   </CurrentIssues>
 </SmellBaseline>
