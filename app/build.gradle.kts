@@ -40,6 +40,19 @@ android {
         debug {
         }
     }
+    flavorDimensions += "appStore"
+    productFlavors {
+        create("googleplay") {
+            dimension = "appStore"
+            applicationIdSuffix = ".googleplay"
+            versionNameSuffix = "-googleplay"
+        }
+        create("fdroid") {
+            dimension = "appStore"
+            applicationIdSuffix = ".fdroid"
+            versionNameSuffix = "-fdroid"
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
