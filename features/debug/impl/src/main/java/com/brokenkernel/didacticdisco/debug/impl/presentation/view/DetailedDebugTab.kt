@@ -130,9 +130,10 @@ internal fun DetailedDebugTab(
             |
             |<big>LocalConfig</big>
             |<b>Locales=</b>${localConfig.locales}
-            |<b>NavigationType=</b>${localConfig.navigation}""" +
+            |<b>NavigationType=</b>${localConfig.navigation}
+            """.trimMargin().replace("\n", "<br/>") +
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    """|<b>ColorMode=</b>${localConfig.colorMode}"""
+                    """|<b>ColorMode=</b>${localConfig.colorMode}""".trimMargin().replace("\n", "<br/>")
                 } else {
                     ""
                 } +
@@ -142,7 +143,8 @@ internal fun DetailedDebugTab(
             |<b>ScreenLayout=</b>${localConfig.screenLayout}""" +
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     """|<b>ScreenHDR=</b>${localConfig.isScreenHdr}
-                        |<b>WideColorGamut=</b>${localConfig.isScreenWideColorGamut}"""
+                        |<b>WideColorGamut=</b>${localConfig.isScreenWideColorGamut}
+                    """.trimMargin().replace("\n", "<br/>")
                 } else {
                     ""
                 } +
@@ -157,7 +159,7 @@ internal fun DetailedDebugTab(
 
         val bubblesAllowed =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
-                """<b>Bubbles Allowed:</b> ${notificationManager.canPostPromotedNotifications()}"""
+                """<b>Bubbles Allowed:</b> ${notificationManager.canPostPromotedNotifications()}""".trimMargin().replace("\n", "<br/>")
             } else {
                 ""
             }

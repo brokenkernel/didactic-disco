@@ -9,6 +9,7 @@
     <ID>LongMethod:DetailedDebugTab.kt:@Composable internal fun DetailedDebugTab</ID>
     <ID>LongMethod:DetailedDebugTab.kt:fun generateDebugInformationText: String</ID>
     <ID>MagicNumber:DetailedDebugTab.kt:100f</ID>
+    <ID>MaxLineLength:DetailedDebugTab.kt:"""&lt;b>Bubbles Allowed:&lt;/b> ${notificationManager.canPostPromotedNotifications()}""".trimMargin().replace("\n", "&lt;br/>")</ID>
     <ID>UnusedParameter:NavigationImplementations.kt:onGoTo: (DidacticDiscoRoute) -> Unit</ID>
   </CurrentIssues>
 </SmellBaseline>

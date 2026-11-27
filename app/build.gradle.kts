@@ -55,9 +55,10 @@ android {
             optimization {
                 enable = false
             }
-            buildConfigField("ENABLE_STRICT_MODE_DEATH", false)
+            buildConfigField("ENABLE_STRICT_MODE_DEATH", true)
         }
         debug {
+            buildConfigField("ENABLE_STRICT_MODE_DEATH", false)
         }
     }
     flavorDimensions += "appStore"
@@ -66,6 +67,7 @@ android {
             dimension = "appStore"
             applicationIdSuffix = ".googleplay"
             versionNameSuffix = "-googleplay"
+            isDefault = true
         }
         create("fdroid") {
             dimension = "appStore"

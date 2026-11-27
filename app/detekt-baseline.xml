@@ -2,11 +2,17 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
+    <ID>ForbiddenComment:DidadticDiscoApplication.kt:DidadticDiscoApplication$// .detectExplicitGc() // TODO: used by tests(?). Wrong API</ID>
+    <ID>ForbiddenComment:DidadticDiscoApplication.kt:DidadticDiscoApplication$// .detectNonSdkApiUsage() // TODO: used by ScreenshotGenerationTest WRONG API</ID>
+    <ID>ForbiddenComment:DidadticDiscoApplication.kt:DidadticDiscoApplication$// TODO: Firebase causes this?</ID>
+    <ID>ForbiddenComment:DidadticDiscoApplication.kt:DidadticDiscoApplication$// TODO: firebase now causes this</ID>
+    <ID>ForbiddenComment:DidadticDiscoApplication.kt:DidadticDiscoApplication$// TODO: move off to its own thread, used by settings</ID>
     <ID>FunctionNaming:ApplicationDropdownMenu.kt:@Composable internal fun ApplicationDropdownMenu</ID>
     <ID>FunctionNaming:DidacticDiscoScaffold.kt:@Composable internal fun DidacticDiscoScaffold</ID>
     <ID>FunctionNaming:LibrariesTab.kt:@Composable internal fun LibrariesTab</ID>
     <ID>FunctionNaming:Theme.kt:@Composable internal fun DidacticDiscoTheme</ID>
     <ID>InvalidPackageDeclaration:ApplicationDropdownMenu.kt:package com.brokenkernel.improvtools.application.presentation.view</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:DidadticDiscoApplication.kt:DidadticDiscoApplication : Application</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
     <ID>LongMethod:DidacticDiscoScaffold.kt:@Composable internal fun DidacticDiscoScaffold</ID>
     <ID>MatchingDeclarationName:AppInfoNavigation.kt:LibrariesScreenNavgiationKey : DidacticDiscoRoute</ID>
