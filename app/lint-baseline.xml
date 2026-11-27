@@ -2,17 +2,6 @@
 <issues format="6" by="lint 9.5.3" type="baseline" client="gradle" dependencies="true" name="AGP (9.5.3)" variant="all" version="9.5.3">
 
     <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.autonomousapps.dependency-analysis than 3.20.4 is available: 3.21.0"
-        errorLine1="dependencyAnalysis = &quot;3.20.4&quot;"
-        errorLine2="                     ~~~~~~~~">
-        <location
-            file="../gradle/libs.versions.toml"
-            line="28"
-            column="22"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.string.about_buildconfig_buildtype` appears to be unused"
         errorLine1="    &lt;string name=&quot;about_buildconfig_buildtype&quot;>&amp;lt;b>BuildConfig Build Type:&amp;lt;/b> %1$s&lt;/string>"
