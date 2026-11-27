@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.VariantDimension
+
 plugins {
     alias(libs.plugins.aboutLibraries)
     alias(libs.plugins.aboutLibrariesAndroid)
@@ -10,6 +12,23 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.parcelize)
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
+}
+
+/**
+ * Type safety for buildConfigField
+ */
+private inline fun <reified ValueT> VariantDimension.buildConfigField(
+    name: String,
+    value: ValueT,
+) {
+    val resolvedValue: String =
+        when (value) {
+            is String -> "\"$value\""
+            is Boolean -> "Boolean.parseBoolean(\"$value\")"
+            else -> value.toString()
+        }
+
+    buildConfigField(ValueT::class.java.simpleName, name, resolvedValue)
 }
 
 android {
@@ -36,6 +55,7 @@ android {
             optimization {
                 enable = false
             }
+            buildConfigField("ENABLE_STRICT_MODE_DEATH", false)
         }
         debug {
         }
