@@ -31,6 +31,7 @@ dependencyResolutionManagement {
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS")
+enableFeaturePreview("ENHANCED_GRAPH_ORDERING")
 
 android {
     compileSdk {
