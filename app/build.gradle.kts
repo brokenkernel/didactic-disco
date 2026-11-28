@@ -131,6 +131,7 @@ dependencies {
     implementation(libs.androidx.runtime)
     implementation(libs.androidx.runtime.saveable)
     implementation(libs.kotlin.parcelize.runtime)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.mikepenz.aboutlibraries.compose.core)
 
     debugImplementation(libs.androidx.compose.ui.tooling)

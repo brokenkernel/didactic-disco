@@ -7,15 +7,16 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.runtime.EntryProviderScope
 import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import com.brokenkernel.didacticdisco.homescreen.api.HomeScreenNavgiationKey
+import com.brokenkernel.didacticdisco.spectogram.api.SpectogramScreenNavgiationKey
 
-public fun EntryProviderScope<DidacticDiscoRoute>.homeScreenEntryBuilder(onGoToSpectogram: () -> Unit) {
+public fun EntryProviderScope<DidacticDiscoRoute>.homeScreenEntryBuilder(onGoTo: (DidacticDiscoRoute) -> Unit) {
     entry<HomeScreenNavgiationKey> {
         Column {
             Text("You Found the Homescreen Impl")
             Button(
                 onClick =
                     dropUnlessResumed {
-                        onGoToSpectogram()
+                        onGoTo(SpectogramScreenNavgiationKey)
                     },
             ) {
                 Text("Go To Spectogram Screen")

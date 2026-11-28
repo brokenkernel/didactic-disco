@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -29,6 +30,7 @@ android {
 dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
+    implementation(libs.androidx.runtime)
 
     runtimeOnly(libs.kotlinx.coroutines.android)
 

@@ -7,6 +7,7 @@
     <ID>FunctionNaming:LibrariesTab.kt:@Composable internal fun LibrariesTab</ID>
     <ID>FunctionNaming:Theme.kt:@Composable internal fun DidacticDiscoTheme</ID>
     <ID>InvalidPackageDeclaration:ApplicationDropdownMenu.kt:package com.brokenkernel.improvtools.application.presentation.view</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoNavigator.kt:DidacticDiscoNavigator</ID>
     <ID>LibraryEntitiesShouldNotBePublic:DidadticDiscoApplication.kt:DidadticDiscoApplication : Application</ID>
     <ID>LibraryEntitiesShouldNotBePublic:MainActivity.kt:MainActivity : ComponentActivity</ID>
     <ID>LongMethod:DidacticDiscoScaffold.kt:@Composable internal fun DidacticDiscoScaffold</ID>

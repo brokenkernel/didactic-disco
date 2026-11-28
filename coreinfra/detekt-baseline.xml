@@ -3,5 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoRoute.kt:DidacticDiscoRoute : Parcelable</ID>
+    <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoRoute.kt:public typealias BackStack = SnapshotStateList&lt;DidacticDiscoRoute></ID>
   </CurrentIssues>
 </SmellBaseline>

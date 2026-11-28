@@ -7,7 +7,7 @@
         <error line="14" column="14" source="standard:function-naming" />
     </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/navigation/DidacticDiscoScaffold.kt">
-        <error line="51" column="14" source="standard:function-naming" />
+        <error line="38" column="14" source="standard:function-naming" />
     </file>
     <file name="src/main/java/com/brokenkernel/didacticdisco/navigation/NavigableScreens.kt">
         <error line="14" column="5" source="standard:no-consecutive-comments" />
