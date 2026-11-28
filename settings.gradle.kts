@@ -10,9 +10,14 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
+    plugins {
+        id("com.android.settings") version "9.5.3" apply false
+    }
 }
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+    id("com.android.settings")
 }
 
 dependencyResolutionManagement {
@@ -26,6 +31,20 @@ dependencyResolutionManagement {
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS")
+
+android {
+    compileSdk {
+        version = release(37) {
+            minorApiLevel = 2
+        }
+    }
+    minSdk {
+        version = release(24)
+    }
+    targetSdk {
+        version = release(37)
+    }
+}
 
 rootProject.name = "DidacticDisco"
 include(":app")

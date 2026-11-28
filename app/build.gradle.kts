@@ -33,17 +33,9 @@ private inline fun <reified ValueT> VariantDimension.buildConfigField(
 
 android {
     namespace = "com.brokenkernel.didacticdisco"
-    compileSdk {
-        version =
-            release(37) {
-                minorApiLevel = 2
-            }
-    }
 
     defaultConfig {
         applicationId = "com.brokenkernel.didacticdisco"
-        minSdk = 24
-        targetSdk = 37
         versionCode = 1
         versionName = "0.0.$versionCode"
 

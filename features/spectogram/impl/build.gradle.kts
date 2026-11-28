@@ -12,16 +12,7 @@ plugins {
 
 android {
     namespace = "com.brokenkernel.didacticdisco.spectogram.impl"
-    compileSdk {
-        version =
-            release(37) {
-                minorApiLevel = 2
-            }
-    }
-
     defaultConfig {
-        minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {

@@ -11,16 +11,7 @@ plugins {
 
 android {
     namespace = "com.brokenkernel.didacticdisco.debug.api"
-    compileSdk {
-        version =
-            release(37) {
-                minorApiLevel = 2
-            }
-    }
-
     defaultConfig {
-        minSdk = 23
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
