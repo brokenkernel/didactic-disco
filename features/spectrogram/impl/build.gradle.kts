@@ -20,7 +20,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
     lint {
-        lintConfig = file("lint.xml")
+        lintConfig = rootProject.file("config/lint.xml")
         baseline = file("lint-baseline.xml")
         checkDependencies = true
         warningsAsErrors = true
