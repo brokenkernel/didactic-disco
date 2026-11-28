@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <SmellBaseline>
   <ManuallySuppressedIssues/>
-  <CurrentIssues>
-    <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoRoute.kt:DidacticDiscoRoute : Parcelable</ID>
-    <ID>LibraryEntitiesShouldNotBePublic:DidacticDiscoRoute.kt:public typealias BackStack = SnapshotStateList&lt;DidacticDiscoRoute></ID>
-  </CurrentIssues>
+  <CurrentIssues/>
 </SmellBaseline>
