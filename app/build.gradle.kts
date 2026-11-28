@@ -12,6 +12,7 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.parcelize)
     kotlin("plugin.power-assert") version libs.versions.kotlin.get()
+    id("com.jraska.module.graph.assertion") version "2.9.1"
 }
 
 /**
@@ -173,4 +174,15 @@ kotlin {
         allWarningsAsErrors = true
     }
     explicitApi()
+}
+
+moduleGraphAssert {
+    assertOnAnyBuild = true
+    allowed =
+        arrayOf(
+            ":.* -> :coreinfra",
+            ":.* -> :components",
+            ":.* -> :features:.*:api",
+            ":app -> :features:.*:impl",
+        )
 }
