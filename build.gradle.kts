@@ -1,3 +1,4 @@
+import dev.iurysouza.modulegraph.LinkText
 import nl.littlerobots.vcu.plugin.resolver.VersionSelectors
 import nl.littlerobots.vcu.plugin.versionSelector
 
@@ -82,4 +83,13 @@ doctor {
     javaHome {
         ensureJavaHomeMatches = false
     }
+}
+
+moduleGraphConfig {
+    readmePath = "${rootDir}/docs/architecture.md"
+    heading = ("# Module Graph")
+    setStyleByModuleType = true
+    nestingEnabled = true
+//    linkText = LinkText.CONFIGURATION
+    includeIsolatedModules = true
 }

@@ -18,6 +18,7 @@ pluginManagement {
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
     id("com.android.settings")
+    id("dev.iurysouza.modulegraph.settings") version "0.15.0"
 }
 
 dependencyResolutionManagement {
@@ -46,6 +47,7 @@ android {
         version = release(37)
     }
 }
+
 
 rootProject.name = "DidacticDisco"
 include(":app")
