@@ -35,7 +35,7 @@ dependencies {
     implementation(enforcedPlatform(libs.androidx.compose.bom))
     implementation(enforcedPlatform(libs.kotlin.bom))
     implementation(projects.features.homescreen.api)
-    implementation(projects.features.spectogram.api)
+    implementation(projects.features.spectrogram.api)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)

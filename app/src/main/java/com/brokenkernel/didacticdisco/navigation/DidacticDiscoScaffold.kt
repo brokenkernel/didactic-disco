@@ -31,7 +31,7 @@ import com.brokenkernel.didacticdisco.appinfo.appInfoScreensEntryBuilder
 import com.brokenkernel.didacticdisco.components.SimpleIconButton
 import com.brokenkernel.didacticdisco.debug.impl.debugScreenEntryBuilder
 import com.brokenkernel.didacticdisco.homescreen.impl.homeScreenEntryBuilder
-import com.brokenkernel.didacticdisco.spectogram.impl.spectogramEntryBuilder
+import com.brokenkernel.didacticdisco.spectrogram.impl.spectrogramEntryBuilder
 import com.brokenkernel.improvtools.application.presentation.view.ApplicationDropdownMenu
 
 @Composable
@@ -115,7 +115,7 @@ internal fun DidacticDiscoScaffold(modifier: Modifier = Modifier) {
                             homeScreenEntryBuilder(
                                 onGoTo = navigator::goTo,
                             )
-                            spectogramEntryBuilder()
+                            spectrogramEntryBuilder()
                             debugScreenEntryBuilder(
                                 onGoTo = navigator::goTo,
                                 snackbarHostState = snackbarHostState,

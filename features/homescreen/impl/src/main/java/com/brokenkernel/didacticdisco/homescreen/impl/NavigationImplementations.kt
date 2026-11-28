@@ -7,7 +7,7 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.runtime.EntryProviderScope
 import com.brokenkernel.didacticdisco.coreinfra.DidacticDiscoRoute
 import com.brokenkernel.didacticdisco.homescreen.api.HomeScreenNavgiationKey
-import com.brokenkernel.didacticdisco.spectogram.api.SpectogramScreenNavgiationKey
+import com.brokenkernel.didacticdisco.spectrogram.api.SpectrogramScreenNavgiationKey
 
 public fun EntryProviderScope<DidacticDiscoRoute>.homeScreenEntryBuilder(onGoTo: (DidacticDiscoRoute) -> Unit) {
     entry<HomeScreenNavgiationKey> {
@@ -16,10 +16,10 @@ public fun EntryProviderScope<DidacticDiscoRoute>.homeScreenEntryBuilder(onGoTo:
             Button(
                 onClick =
                     dropUnlessResumed {
-                        onGoTo(SpectogramScreenNavgiationKey)
+                        onGoTo(SpectrogramScreenNavgiationKey)
                     },
             ) {
-                Text("Go To Spectogram Screen")
+                Text("Go To Spectrogram Screen")
             }
         }
     }
